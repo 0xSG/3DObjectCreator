@@ -5,7 +5,7 @@
 #include <iostream>
 #include "math.h"
 #include <vector>
-
+//DEV :SURYA GANGARAJ K //// S G K //// 0xpulsar - GitHub
 /*typedef*/
 typedef struct Point {
     GLfloat x, y, z;
@@ -18,7 +18,6 @@ typedef std::vector<point> Line;
 
 
 static std::vector<point> Cline;
-static std::vector<point> Zline;
 static std::vector<Line> lines;
 static GLfloat size = -0.3;
 static GLfloat vision [3]={0.0,45.0,1.0};
@@ -73,8 +72,6 @@ void projectAllDots(){
     }
 }
 
-
-
 void makeLine(point p1, point p2) {
     GLfloat pf1[3]={p1.x, p1.y, p1.z};
     GLfloat pf2[3]={p2.x, p2.y, p2.z};
@@ -87,6 +84,7 @@ void makeLine(point p1, point p2) {
     glEnd();
     glPopMatrix();
 }
+
 void fillSides( std::vector<point> line){
     for(point p:line){
         point p1(p.x,p.y,0.0);
@@ -94,10 +92,10 @@ void fillSides( std::vector<point> line){
         makeLine(p1, p2);
     }
 }
-void drawPolygon( std::vector<point> line){
+
+void drawLineLoop( std::vector<point> line){
     glPushMatrix();
     glBegin(GL_LINE_LOOP);
-    
     glLineWidth(10);
     for (point p2 : line) {
         const GLfloat v[3]={p2.x, p2.y, p2.z};
@@ -107,7 +105,7 @@ void drawPolygon( std::vector<point> line){
     }
     glPopMatrix();
     glEnd();
-    glPushMatrix();
+
     
 }
 
@@ -117,10 +115,8 @@ void drawLines() {
     int size = Cline.size();
     if (size > 1) {
         pre = Cline.front();
-        
         for (point p : Cline) {
             makeLine(pre, p);
-            
             pre.x = p.x;
             pre.y = p.y;
             pre.z = p.z;
@@ -149,7 +145,7 @@ void displayW1(void) {
 
 void displayW2(void) {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    
+    //DEV :SURYA GANGARAJ K //// S G K //// 0xpulsar - GitHub
     printf("\nvision> %d %d %d \n",(int)vision[0],(int) vision[1],(int) vision[2]);
     glMatrixMode (GL_MODELVIEW);
     glLoadIdentity();
@@ -165,10 +161,10 @@ void displayW2(void) {
             glRotatef(theta[3], 0.0, 0.0, 1.0);
             glPushMatrix();
             
-            drawPolygon(l);
+            drawLineLoop(l);
             fillSides(l);
             glTranslatef(0.0, 0.0, size);
-            drawPolygon(l);
+            drawLineLoop(l);
             
             glPopMatrix();
             glEnd();
@@ -179,26 +175,18 @@ void displayW2(void) {
 }
 
 
-void copy_points_for_Z(){
-    for (point p1 : Cline){
-        point t(p1.x,p1.y,-1.0);
-        Zline.push_back(t);
-    }
-}
-
 
 void mouseW1(int button, int state, int x, int y) {
     if (state == GLUT_DOWN && button == GLUT_LEFT_BUTTON) {
         point CP(x, (500 - y), 1.0);
         CP = pointSimplifier(CP, Cline);
-        //CP=converter(CP);
-        //printf("\n%f %f %f",(float)CP.x,(float)CP.y,(float)CP.z);
-        if (checkIsFirst(CP, Cline)) {      //Make a cope of the current line
+       
+        if (checkIsFirst(CP, Cline)) {
             //loop formed..
             printf("loop formed..");
-            copy_points_for_Z();
+            
             lines.push_back(Cline);
-            //lines.push_back(Zline);
+            
             Cline.clear();
         } else {
             Cline.push_back(CP);
@@ -230,7 +218,6 @@ void mykeyboardW2(unsigned char key, int x, int y) {
         case 'w':
             vision[2]+=1;
             break;
-            
         case 's':
             vision[2]-=1;
             break;
@@ -254,14 +241,14 @@ void spingCube(){
 }
 
 int main(int argc, char *argv[]) {
-    int win, n = 0, i, x, y, z;
     
+    //DEV :SURYA GANGARAJ K //// S G K //// 0xpulsar - GitHub
     /*Window 2 */
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_SINGLE|GLUT_RGB | GLUT_DEPTH);
     glutInitWindowPosition(100,150);
     glutInitWindowSize(600, 600);
-    win = glutCreateWindow("Mypolygons");
+    glutCreateWindow("3D Viewer");
     glutKeyboardFunc(mykeyboardW2);
     glClearColor(0.0, 0.0, 0.0, 0.0);
     glutIdleFunc(spingCube);
@@ -275,7 +262,7 @@ int main(int argc, char *argv[]) {
     glutInitDisplayMode(GLUT_RGB);
     glutInitWindowPosition(800,150);
     glutInitWindowSize(width, height);
-    win = glutCreateWindow("Draw");
+    glutCreateWindow("Draw Here");
     glutKeyboardFunc(mykeyboardW1);
     
     glClearColor(0.0, 0.0, 0.0, 0.0);
