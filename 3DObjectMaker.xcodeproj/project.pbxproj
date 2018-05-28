@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B639E42120BC24E600B04EF1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B639E42020BC24E600B04EF1 /* main.cpp */; };
+		B639E42920BC24FF00B04EF1 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B639E42820BC24FF00B04EF1 /* OpenGL.framework */; };
+		B639E42B20BC250600B04EF1 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B639E42A20BC250600B04EF1 /* GLUT.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		B639E41D20BC24E600B04EF1 /* 3DObjectMaker */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 3DObjectMaker; sourceTree = BUILT_PRODUCTS_DIR; };
 		B639E42020BC24E600B04EF1 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		B639E42820BC24FF00B04EF1 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		B639E42A20BC250600B04EF1 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +36,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B639E42B20BC250600B04EF1 /* GLUT.framework in Frameworks */,
+				B639E42920BC24FF00B04EF1 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +49,7 @@
 			children = (
 				B639E41F20BC24E600B04EF1 /* 3DObjectMaker */,
 				B639E41E20BC24E600B04EF1 /* Products */,
+				B639E42720BC24FF00B04EF1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +67,15 @@
 				B639E42020BC24E600B04EF1 /* main.cpp */,
 			);
 			path = 3DObjectMaker;
+			sourceTree = "<group>";
+		};
+		B639E42720BC24FF00B04EF1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B639E42A20BC250600B04EF1 /* GLUT.framework */,
+				B639E42820BC24FF00B04EF1 /* OpenGL.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
