@@ -1,18 +1,27 @@
-# 3D Object Maker 
+# 3D OBJECT MAKER 
 
 ## Dependency
+
+* GLUT   Framework
+* OpenGL Framework
+* Xcode
+
+#### OpenGL Framework
 ```
- GLUT   Framwork
- OpenGL Framwork
+Click on project name > Build Phases > Link Binary With Libraries > '+' > 'OpenGL.framework'
 ```
-## Keyboard shortcuts
-### Draw panel
+#### GLUT Framework
+```
+Click on project name > Build Phases > Link Binary With Libraries > '+' > 'GLUT.framework'
+```
+## Keyboard Shortcuts
+### Draw Panel
 ```
   z - To undo
   
   Mouse Click -To draw the pattern
 ```
-### 3d Viewer panel
+### 3D Viewer Panel
 ```
   w - White color
   r - Red color
@@ -24,7 +33,7 @@
   
   Mouse Click -To change the axies of rotation
 ```
-## Developer details
+## Developer Details
   SURYA GANGARAJ K
 ## License
 ![alt text](https://github.com/0xpulsar/3DObjectMaker/raw/master/ApacheLicense.png)
