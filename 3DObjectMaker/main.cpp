@@ -7,7 +7,7 @@
 #include <vector>
 
 // DEV :SURYA GANGARAJ K //// S G K //// 0xpulsar - GitHub
-
+/* THIS PROJECT IS OPEN SOURCED UNDER APACHE LICENSE V2.0 */
 /*typedef*/
 typedef struct Point {
     GLfloat x, y, z;
