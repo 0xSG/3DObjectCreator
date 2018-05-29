@@ -5,7 +5,9 @@
 #include <iostream>
 #include "math.h"
 #include <vector>
-//DEV :SURYA GANGARAJ K //// S G K //// 0xpulsar - GitHub
+
+// DEV :SURYA GANGARAJ K //// S G K //// 0xpulsar - GitHub
+
 /*typedef*/
 typedef struct Point {
     GLfloat x, y, z;
@@ -22,6 +24,8 @@ static std::vector<Line> lines;
 static GLfloat size = -0.3;
 static GLfloat vision [3]={0.0,45.0,1.0};
 static GLdouble theta[3] = {0.0, 0.0, 0.0};
+static GLfloat colors [] [3]={{1.0,0.0,0.0},{0.0,1.0,0.0},{0.0,0.0,1.0},{1.0,1.0,1.0}};
+static GLint color=3;
 static float height=500,width=400,hMid=250,wMid=200;
 static GLint axis = 2;
 
@@ -77,7 +81,8 @@ void makeLine(point p1, point p2) {
     GLfloat pf2[3]={p2.x, p2.y, p2.z};
     glPushMatrix();
     glBegin(GL_LINES);
-    glColor3f(p2.x/400, p2.y/500 , 1.0);
+    glColor3f(colors[color][0],colors[color][1],colors[color][2]);
+    
     glLineWidth(3);
     glVertex3fv(pf1);
     glVertex3fv(pf2);
@@ -99,7 +104,7 @@ void drawLineLoop( std::vector<point> line){
     glLineWidth(10);
     for (point p2 : line) {
         const GLfloat v[3]={p2.x, p2.y, p2.z};
-        glColor3f(p2.x / 400, p2.y / 500, 1.0);
+        glColor3f(colors[color][0],colors[color][1],colors[color][2]);
         //printf("\n%f %f %f \n",(float)v[0],(float) v[1],(float) v[2]);
         glVertex2fv(v);
     }
@@ -146,7 +151,7 @@ void displayW1(void) {
 void displayW2(void) {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     //DEV :SURYA GANGARAJ K //// S G K //// 0xpulsar - GitHub
-    printf("\nvision> %d %d %d \n",(int)vision[0],(int) vision[1],(int) vision[2]);
+    //printf("\nvision> %d %d %d \n",(int)vision[0],(int) vision[1],(int) vision[2]);
     glMatrixMode (GL_MODELVIEW);
     glLoadIdentity();
     
@@ -216,16 +221,23 @@ void mykeyboardW2(unsigned char key, int x, int y) {
     printf("%c",key);
     switch (key) {
         case 'w':
-            vision[2]+=1;
+            color=3;
             break;
-        case 's':
-            vision[2]-=1;
+        case 'r':
+            //red
+            color=0;
             break;
-        case 'a':
-            vision[0]+=1;
+        case 'g':
+            color=1;
+            break;
+        case 'b':
+            color=2;
+            break;
+        case 'i':
+            size-=0.01;
             break;
         case 'd':
-            vision[0]-=1;
+            size+=0.01;
             break;
         default:
             break;
