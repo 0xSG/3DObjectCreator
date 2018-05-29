@@ -1,4 +1,4 @@
-# 3DObjectMaker
+# 3D Object Maker
 ## Dependency
 ```
  GLUT   Framwork
