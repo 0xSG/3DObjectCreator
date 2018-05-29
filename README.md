@@ -1,5 +1,5 @@
 # 3D Object Maker
-[![Build Status](https://travis-ci.org/0xpulsar/3DObjectMaker.svg?branch=master)](https://travis-ci.org/0xpulsar/3DObjectMaker)
+
 ## Dependency
 ```
  GLUT   Framwork
