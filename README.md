@@ -1,4 +1,4 @@
-# 3D Object Maker
+# 3D Object Maker [![Build Status](https://travis-ci.org/0xpulsar/ASCII-STRING-FORMING.svg?branch=master)](https://travis-ci.org/0xpulsar/ASCII-STRING-FORMING)
 
 ## Dependency
 ```
