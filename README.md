@@ -1,4 +1,4 @@
-# 3D OBJECT MAKER 
+# 3D OBJECT MAKER   [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/0xpulsar/3DObjectMaker/blob/master/LICENSE)
 
 ## Dependency
 
