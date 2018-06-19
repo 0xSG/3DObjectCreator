@@ -1,4 +1,4 @@
-# 3D OBJECT MAKER   [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/0xpulsar/3DObjectMaker/blob/master/LICENSE)
+# 3D OBJECT CREATOR   [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/0xpulsar/3DObjectMaker/blob/master/LICENSE)
 
 ## Dependency
 
@@ -14,6 +14,8 @@ Click on project name > Build Phases > Link Binary With Libraries > '+' > 'OpenG
 ```
 Click on project name > Build Phases > Link Binary With Libraries > '+' > 'GLUT.framework'
 ```
+## Working
+![Alt Text](https://github.com/0xpulsar/3DObjectMaker/raw/master/3d_object_creator.gif)
 ## Keyboard Shortcuts
 ### Draw Panel
 ```
