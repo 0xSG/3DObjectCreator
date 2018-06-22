@@ -18,7 +18,7 @@ Click on project name > Build Phases > Link Binary With Libraries > '+' > 'GLUT.
 ![Alt Text](https://github.com/0xpulsar/3DObjectMaker/raw/master/3d_object_creator.gif)
 ## Scope
 ```
-Currently this project is now a simple working model of a 3d object creator with lot of room for extentions. 
+Currently this project is now a simple working model of 3d object creator with lot of room for extending. 
 Possibilities are: 
 
 🌀 create your own custom 3d editor.
