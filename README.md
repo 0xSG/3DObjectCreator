@@ -33,7 +33,7 @@ Possibilities are:
 ```
   z - To undo
   
-  Mouse Click -To draw the pattern
+  Mouse Click - To draw the pattern
 ```
 ### 3D Viewer Panel
 ```
@@ -45,7 +45,7 @@ Possibilities are:
   i - To increase the width
   d - To decrease the width
   
-  Mouse Click -To change the axies of rotation
+  Mouse Click - To change the axies of rotation
 ```
 ## Developer Details
   SURYA GANGARAJ K
