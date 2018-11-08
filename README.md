@@ -1,4 +1,4 @@
-# 3D OBJECT CREATOR   [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/0xpulsar/3DObjectMaker/blob/master/LICENSE)
+# 3D OBJECT CREATOR   [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/0xpulsar/3DObjectMaker/blob/master/LICENSE) [![Waffle.io - Columns and their card count](https://badge.waffle.io/0xpulsar/3DObjectCreator.svg?columns=all)](https://waffle.io/0xpulsar/3DObjectCreator)
 
 ## Dependency
 
