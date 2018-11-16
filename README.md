@@ -25,7 +25,7 @@ Possibilities are:
 🌀 create your own custom 3d Object Maker for 3d printer.
 🌀 Data to graph plotter.
 
-⚙️🔭 The possibilities are limit less 🔨🔬🔮
+⚙️🔭 The possibilities are limit less... 🔨🔬🔮
 ```
 
 ## Keyboard Shortcuts
